@@ -16,7 +16,7 @@ include '../../includes/header.php';
 
 <?php else: ?>
     <?php foreach($rutas as $ruta): ?>
-        <li style="margin-bottom:20px;">
+        <li>
 
             <h3><?= sanitize($ruta['datos']['nombre']) ?></h3>
 
@@ -27,7 +27,7 @@ include '../../includes/header.php';
             <p><strong>Provincia:</strong> <?= sanitize($ruta['datos']['provincia']) ?></p>
 
 
-            <p><strong>Época recomendada:</strong>
+            <p><strong>Fotos:</strong>
                 <?= implode(", ", array_map('sanitize', $ruta['datos']['epoca'])) ?>
             </p>
 
