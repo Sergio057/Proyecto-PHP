@@ -8,42 +8,75 @@ $rutas = readJson('rutas.json');
 include '../../includes/header.php';
 ?>
 
-<h2>Lista de Rutas</h2>
-<a href="create.php" class="button">Crear Nueva Ruta</a>
+<div class="container mt-4">
 
-<?php if(empty($rutas)): ?>
-    <li>No hay rutas disponibles.</li>
+    <h2 class="mb-4">Lista de Rutas</h2>
 
-<?php else: ?>
-    <?php foreach($rutas as $ruta): ?>
-        <li>
+   <a href="create.php" class="button">Crear Nueva Ruta</a>
 
-            <h3><?= sanitize($ruta['datos']['nombre']) ?></h3>
+    <div class="row">
+    <?php if(empty($rutas)): ?>
 
-            <p><strong>Dificultad:</strong> <?= sanitize($ruta['datos']['dificultad']) ?></p>
-            <p><strong>Distancia:</strong> <?= sanitize($ruta['datos']['distancia']) ?> km</p>
-            <p><strong>Desnivel:</strong> <?= sanitize($ruta['datos']['desnivel']) ?> m</p>
-            <p><strong>Duración:</strong> <?= sanitize($ruta['datos']['duracion']) ?> h</p>
-            <p><strong>Provincia:</strong> <?= sanitize($ruta['datos']['provincia']) ?></p>
+        <div class="alert alert-info">No hay rutas disponibles.</div>
 
+    <?php else: ?>
 
-            <p><strong>Fotos:</strong>
-                <?= implode(", ", array_map('sanitize', $ruta['datos']['epoca'])) ?>
-            </p>
+        <?php foreach($rutas as $ruta): ?>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
 
-            <?php if(!empty($ruta['fotos'])): ?>
-                <div style="margin-top:10px;">
-                    <?php foreach($ruta['fotos'] as $foto): ?>
-                        <img src="<?= $base_url ?>/uploads/photos/<?= sanitize($foto) ?>" 
-                             width="120"
-                             style="margin-right:10px; border-radius:5px;"
-                             alt="<?= sanitize($ruta['datos']['nombre']) ?>">
-                    <?php endforeach; ?>
+                    <?php if(!empty($ruta['fotos'])): ?>
+                        <img 
+                            src="<?= $base_url ?>/uploads/photos/<?= sanitize($ruta['fotos'][0]) ?>" 
+                            class="card-img-top"
+                            alt="<?= sanitize($ruta['datos']['nombre']) ?>"
+                            style="object-fit:cover; height:200px;">
+                    <?php else: ?>
+                        <div class="bg-secondary text-white d-flex align-items-center justify-content-center"
+                             style="height:200px;">
+                            Sin imagen
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            <?= sanitize($ruta['datos']['nombre']) ?>
+                        </h5>
+
+                        <p class="card-text mb-1">
+                            <strong>Dificultad:</strong> 
+                            <?= sanitize($ruta['datos']['dificultad']) ?>
+                        </p>
+
+                        <p class="card-text mb-1">
+                            <strong>Distancia:</strong> 
+                            <?= sanitize($ruta['datos']['distancia']) ?> km
+                        </p>
+
+                        <p class="card-text mb-1">
+                            <strong>Desnivel:</strong> 
+                            <?= sanitize($ruta['datos']['desnivel']) ?> m
+                        </p>
+
+                        <p class="card-text mb-1">
+                            <strong>Duración:</strong> 
+                            <?= sanitize($ruta['datos']['duracion']) ?> h
+                        </p>
+
+                        <p class="card-text mb-1">
+                            <strong>Provincia:</strong> 
+                            <?= sanitize($ruta['datos']['provincia']) ?>
+                        </p>
+
+                    </div>
+
                 </div>
-            <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
 
-        </li>
-    <?php endforeach; ?>
-<?php endif; ?>
+    <?php endif; ?>
+    </div>
+</div>
 
 <?php include '../../includes/footer.php'; ?>
