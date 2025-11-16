@@ -1,0 +1,18 @@
+[
+    {
+        "username": "sergio",
+        "email": "sergio@gmail.com",
+        "password": "$2y$10$Ikj\/db16K5.oN\/9FL55Uh.6xsLDMl.8zZVzKhKD5iyNA510x9qaYW",
+        "nivel_experiencia": "Intermedio",
+        "especialidad": "Escalada",
+        "provincia": "Zaragoza"
+    },
+    {
+        "username": "prueba",
+        "email": "prueba@gmail.com",
+        "password": "$2y$10$C1nnQE97Q17iyQvM3VnCqObS.SPgoSS.tGXevWlH7Hi2qS6FaWTIS",
+        "nivel_experiencia": "amateur",
+        "especialidad": "senderismo",
+        "provincia": "navarra"
+    }
+]

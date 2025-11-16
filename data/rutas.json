@@ -1,0 +1,87 @@
+[
+    {
+        "datos": {
+            "nombre": "ruta maritima",
+            "dificultad": "facil",
+            "distancia": "20",
+            "desnivel": "200",
+            "duracion": "1",
+            "provincia": "Zaragoza",
+            "epoca": [
+                "verano"
+            ],
+            "descripcion": "aaa",
+            "nivel_tecnico": "1",
+            "nivel_fisico": "1"
+        },
+        "fotos": []
+    },
+    {
+        "datos": {
+            "nombre": "ruta se\u00f1iorial",
+            "dificultad": "muy dificil",
+            "distancia": "100",
+            "desnivel": "600",
+            "duracion": "2",
+            "provincia": "Zaragoza",
+            "epoca": [
+                "verano"
+            ],
+            "descripcion": "",
+            "nivel_tecnico": "3",
+            "nivel_fisico": "5"
+        },
+        "fotos": []
+    },
+    {
+        "datos": {
+            "nombre": "ruta navarrica",
+            "dificultad": "moderada",
+            "distancia": "45",
+            "desnivel": "111",
+            "duracion": "3",
+            "provincia": "navarra",
+            "epoca": [
+                "primavera"
+            ],
+            "descripcion": "muy buena experiencia",
+            "nivel_tecnico": "5",
+            "nivel_fisico": "5"
+        },
+        "fotos": []
+    },
+    {
+        "datos": {
+            "nombre": "ruta del bacalado",
+            "dificultad": "facil",
+            "distancia": "20",
+            "desnivel": "1",
+            "duracion": "32",
+            "provincia": "navarra",
+            "epoca": [
+                "verano"
+            ],
+            "descripcion": "",
+            "nivel_tecnico": "4",
+            "nivel_fisico": "3"
+        },
+        "fotos": []
+    },
+    {
+        "datos": {
+            "nombre": "prueba",
+            "dificultad": "facil",
+            "distancia": "1",
+            "desnivel": "455",
+            "duracion": "1",
+            "provincia": "1",
+            "epoca": [
+                "primavera"
+            ],
+            "descripcion": "",
+            "nivel_tecnico": "1",
+            "nivel_fisico": "1"
+        },
+        "fotos": []
+    }
+]
